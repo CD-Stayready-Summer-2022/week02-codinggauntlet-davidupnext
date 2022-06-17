@@ -16,8 +16,9 @@ public class Problem {
      */
 
     public static String stringCopies(String word, int n) {
+        String copies = word.repeat(n);
 
-        return null;
+        return copies;
     }
 
 
@@ -32,6 +33,13 @@ public class Problem {
      */
 
     public static Boolean followedX(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            char current = str.charAt(i);
+            char next = str.charAt(i + 1);
+
+
+        }
+
 
         return null;
     }
@@ -70,8 +78,20 @@ public class Problem {
      */
 
     public static Boolean basicNumbers123(int[] nums) {
-
-        return null;
+        Boolean fact = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            int current = nums[i];
+            if (current == 1) {
+                int next = nums[i + 1];
+                if (next == 2) {
+                    int nextnext = nums[i + 2];
+                    if (nextnext == 3) {
+                        fact = true;
+                    }
+                }
+            }
+        }
+        return fact;
     }
 
 
@@ -108,7 +128,19 @@ public class Problem {
      */
 
     public static Boolean dontAcceptTriples(int[] score) {
-
-        return null;
+        Boolean fact = true;
+        for (int i = 0; i < score.length - 1; i++) {
+            int current = score[i];
+            if (current == current) {
+                int next = score[i + 1];
+                if (next == current) {
+                    int nextnext = score[i + 2];
+                    if (nextnext == current) {
+                        fact = false;
+                    }
+                }
+            }
+        }
+        return fact;
     }
 }
